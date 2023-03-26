@@ -8,6 +8,7 @@
           <a href="{{ block.settings.product_link }}" class="product-link">{{ block.settings.text }}</a>
           <img src="{{ block.settings.product_image.src | img_url: '300x' }}" width="{{ block.settings.product_image.width }}" height="{{block.settings.product_image.height}}" alt="{{ block.settings.product_image.alt }}" class="product-image">
           <p class="product-price">{{ block.settings.product_price | money_without_trailing_zeros }}</p>
+          <span>{{ slideIndex }}</span>
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
       {% endfor %}
@@ -97,11 +98,6 @@
       "type": "slide",
       "name": "Slide",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
         {
           "type": "url",
           "id": "product_link",
