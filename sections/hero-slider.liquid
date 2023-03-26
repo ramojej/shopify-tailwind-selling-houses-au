@@ -1,5 +1,5 @@
 
-  {% assign slideIndex = 0 %}
+  {% assign slideIndex = 1 %}
 
   <div class="custom-slider">
     <div class="slider-container">
@@ -7,7 +7,7 @@
         <div class="slide">
           <a href="{{ block.settings.product_link }}" class="product-link">{{ block.settings.text }}</a>
           <img src="{{ block.settings.product_image.src | img_url: '300x' }}" width="{{ block.settings.product_image.width }}" height="{{block.settings.product_image.height}}" alt="{{ block.settings.product_image.alt }}" class="product-image">
-          <p class="product-price">{{ block.settings.product_price | money_without_trailing_zeros }}</p>
+          <p class="product-price">{{ block.settings.product_price | times: 100 | money_without_trailing_zeros }}</p>
           <span>{{ slideIndex }}</span>
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
