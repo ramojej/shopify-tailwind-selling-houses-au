@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -511,4 +511,71 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.twcss-relative {
+  position: relative;
+}
+
+.twcss-flex {
+  display: flex;
+}
+
+.twcss-h-\[37\] {
+  height: 37;
+}
+
+.twcss-h-\[37px\] {
+  height: 37px;
+}
+
+.twcss-w-\[37\] {
+  width: 37;
+}
+
+.twcss-w-\[37px\] {
+  width: 37px;
+}
+
+.twcss-translate-x-\[-118px\] {
+  --tw-translate-x: -118px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.twcss-translate-y-\[55px\] {
+  --tw-translate-y: 55px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.twcss-items-center {
+  align-items: center;
+}
+
+.twcss-justify-center {
+  justify-content: center;
+}
+
+.twcss-overflow-hidden {
+  overflow: hidden;
+}
+
+.twcss-rounded-full {
+  border-radius: 9999px;
+}
+
+.twcss-bg-main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 184 193 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 990px) {
+  .lg\:twcss-translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:twcss-translate-y-0 {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }

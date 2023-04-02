@@ -1,6 +1,6 @@
 
 {% assign slideIndex = 0 %}
-
+<div class="custom-hero twcss-relative twcss-overflow-hidden">
   <div class="custom-slider">
     <div class="slider-container">
       {% for block in section.blocks %}
@@ -13,8 +13,6 @@
           <h2>{{ product.title }}</h2>
           <p>{{ product.description }}</p>
           <p>Price: {{ product.price | money }}</p>
-          <p>Vendor: {{ product.vendor }}</p>
-          <p>Type: {{ product.type }}</p>
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
       {% endfor %}
@@ -28,6 +26,10 @@
         <button class="nav-button" data-index="{{ forloop.index0 }}"></button>
       {% endfor %}
     </nav>
+
+    
+  </div>
+  {% render 'icon-circles' %}
   </div>
 
 
@@ -51,6 +53,7 @@
   
     .slide img {
       width: 100%;
+      max-width: 320px
     }
   
     .prev-button,
