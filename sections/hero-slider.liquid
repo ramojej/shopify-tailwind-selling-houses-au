@@ -18,8 +18,9 @@
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
       {% endfor %}
-      <a href="{{ block.settings.explore_products_link }}">Explore prdocuts</a>
+      
     </div>
+    <a href="{{ section.settings.explore_products_link }}">Explore prdocuts</a>
     <button class="prev-button">&laquo;</button>
     <button class="next-button">&raquo;</button>
     <nav class="slider-nav">
@@ -153,6 +154,32 @@
   });
 
   navButtons[0].classList.add('active');
+
+  // Draggable functionality
+  let pointerStartX = null;
+
+  function handlePointerDown(event) {
+    pointerStartX = event.clientX || event.touches[0].clientX;
+  }
+
+  function handlePointerUp(event) {
+    const pointerEndX = event.clientX || event.changedTouches[0].clientX;
+
+    if (pointerStartX && Math.abs(pointerStartX - pointerEndX) > 50) {
+      if (pointerStartX > pointerEndX) {
+        changeSlide(slider, 1);
+      } else {
+        changeSlide(slider, -1);
+      }
+    }
+
+    pointerStartX = null;
+  }
+
+  sliderElement.addEventListener('mousedown', handlePointerDown);
+  sliderElement.addEventListener('mouseup', handlePointerUp);
+  sliderElement.addEventListener('touchstart', handlePointerDown);
+  sliderElement.addEventListener('touchend', handlePointerUp);
 });
 
 {% endjavascript %}
