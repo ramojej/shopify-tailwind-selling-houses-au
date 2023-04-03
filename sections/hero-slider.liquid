@@ -1,14 +1,16 @@
 
 {% assign slideIndex = 0 %}
-<div class="custom-hero twcss-relative twcss-overflow-hidden">
+<div class="custom-hero twcss-relative twcss-overflow-hidden page-width twcss-pt-[175px]">
   <div class="custom-slider">
+    <span class="twcss-block twcss-uppercase twcss-text-black twcss-text-[11px] twcss-tracking-[1.1px]">As seen on foxtel network</span>
     <div class="slider-container">
       {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product] %}
         <div class="slide">
           {% assign product = all_products[block.settings.product] %}
-          <a href="{{ product.url }}" class="product-link">{{ product.title }}</a>
+          <h1>{{ block.settings.text }}</h1>
           <img src="{{ product.featured_image.src | img_url: '300x' }}" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}"alt="{{ product.featured_image.alt }}" class="product-image">
+          <a href="{{ product.url }}" class="product-link">View Product</a>
           <p class="product-price">{{ product.price | money }}</p>
           <h2>{{ product.title }}</h2>
           <p>{{ product.description }}</p>
