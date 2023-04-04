@@ -3,24 +3,32 @@
 <div class="custom-hero twcss-relative twcss-overflow-hidden page-width twcss-pt-[175px]">
   <div class="custom-slider">
     <span class="twcss-block twcss-uppercase twcss-text-black twcss-text-[11px] twcss-tracking-[1.1px]">As seen on foxtel network</span>
+    <h1>{{ section.settings.hero_text }}</h1>
     <div class="slider-container">
       {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product] %}
+        {% assign first_tag = product.tags | first %}
         <div class="slide">
           {% assign product = all_products[block.settings.product] %}
-          <h1>{{ block.settings.text }}</h1>
+          
           <img src="{{ product.featured_image.src | img_url: '300x' }}" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}"alt="{{ product.featured_image.alt }}" class="product-image">
           <a href="{{ product.url }}" class="product-link">View Product</a>
           <p class="product-price">{{ product.price | money }}</p>
-          <h2>{{ product.title }}</h2>
+          
           <p>{{ product.description }}</p>
           <p>Price: {{ product.price | money }}</p>
+          <div class="product-info">
+            <span>{{ first_tag }}</span>
+            <h2>{{ product.title }}</h2>
+          </div>
+          
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
       {% endfor %}
       
     </div>
-    <a href="{{ section.settings.explore_products_link }}">Explore prdocuts</a>
+    <a href="{{ section.settings.explore_products_link }}" class="explore-link">Explore <br /> products {% render 'icon-arrow-right' %}</a>
+    <div class="slide-number"></div>
     <button class="prev-button">&laquo;</button>
     <button class="next-button">&raquo;</button>
     <nav class="slider-nav">
@@ -31,7 +39,7 @@
 
     
   </div>
-  {% render 'icon-circles' %}
+  {% render 'icon-circles-mobiles' %}
   </div>
 
 
@@ -40,6 +48,7 @@
       position: relative;
       max-width: 800px;
       margin: 0 auto;
+      z-index: 2;
     }
   
     .slider-container {
@@ -81,7 +90,7 @@
     }
   
     .slider-nav {
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       margin-top: 15px;
@@ -101,6 +110,77 @@
     .nav-button.active {
       background-color: #333;
     }
+
+    .custom-slider h1 {
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.275px;
+      line-height: 40px;
+      margin-top: 15px;
+    }
+
+    .icon-circles-mobiles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .explore-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      background-color: var(--teal);
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      text-align: center;
+      flex-direction: column;
+      position: absolute;
+      right: -20px;
+      z-index: 3;
+      bottom: 135px;
+    }
+
+    .explore-link svg {
+      transition: all 0.3s ease;
+      margin-top: 10px
+    }
+
+    .explore-link:hover svg {
+      margin-left: 10px
+    }
+
+    .explore-link:hover:before {
+      animation: backgroundChange 1s forwards;
+    }
+
+    .explore-link::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .explore-link:hover::before {
+      transform: scale(20);
+      opacity: 1;
+      z-index: -1;
+    }
   </style>
 
 {% javascript %}
@@ -115,6 +195,8 @@
     currentIndex: 0,
   };
 
+  updateSlideNumber(slider); 
+
   function updateSlider(slider) {
     slider.slides.forEach((slide, index) => {
       slide.style.transform = `translateX(-${slider.currentIndex * 100}%)`;
@@ -124,6 +206,17 @@
       navButton.classList.remove('active');
     });
     navButtons[slider.currentIndex].classList.add('active');
+  }
+
+  function updateSlideNumber(slider) {
+    const slideNumberElement = sliderElement.querySelector('.slide-number');
+    const currentSlide = slider.currentIndex + 1;
+    const totalSlides = slider.slides.length;
+
+    const formattedCurrentSlide = currentSlide < 10 ? `0${currentSlide}` : currentSlide;
+    const formattedTotalSlides = totalSlides < 10 ? `0${totalSlides}` : totalSlides;
+
+    slideNumberElement.textContent = `${formattedCurrentSlide}/${formattedTotalSlides}`;
   }
 
   function changeSlide(slider, change) {
@@ -136,6 +229,7 @@
     }
 
     updateSlider(slider);
+    updateSlideNumber(slider); 
   }
 
   function navigateToSlide(slider, index) {
@@ -197,6 +291,12 @@
       "type": "url",
       "id": "explore_products_link",
       "label": "Explore Products Link"
+    },
+    {
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero Text",
+      "default": "Make your space look amazing"
     }
   ],
   "blocks": [
@@ -205,9 +305,9 @@
       "name": "Slide",
       "settings": [
         {
-          "type": "html",
-          "id": "text",
-          "label": "Text"
+          "type": "text",
+          "id": "as_seen",
+          "label": "Episode Number"
         },
         {
           "type": "product",
