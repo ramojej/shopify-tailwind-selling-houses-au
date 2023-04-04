@@ -221,21 +221,21 @@
         "template--18350036451604__ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b-16798081472baad28b-0": {
           "type": "slide",
           "settings": {
-            "text": "Make your space look amazing",
+            "as_seen": "Season 15 Episode 5",
             "product": "sled-ward"
           }
         },
         "6ee1c7ad-332a-4eed-bb04-1c1f16eed213": {
           "type": "slide",
           "settings": {
-            "text": "Product 2",
+            "as_seen": "",
             "product": ""
           }
         },
         "286d380d-ee95-4255-854f-2748440a849c": {
           "type": "slide",
           "settings": {
-            "text": "Product 3",
+            "as_seen": "",
             "product": ""
           }
         }
@@ -246,7 +246,8 @@
         "286d380d-ee95-4255-854f-2748440a849c"
       ],
       "settings": {
-        "explore_products_link": "shopify:\/\/collections\/all"
+        "explore_products_link": "shopify:\/\/collections\/all",
+        "hero_text": "Make your space look amazing"
       }
     }
   },
