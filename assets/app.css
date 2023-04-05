@@ -521,6 +521,30 @@ video {
   position: relative;
 }
 
+.twcss-left-\[12px\] {
+  left: 12px;
+}
+
+.twcss-top-\[-1px\] {
+  top: -1px;
+}
+
+.twcss-mt-\[5px\] {
+  margin-top: 5px;
+}
+
+.twcss-mt-\[10px\] {
+  margin-top: 10px;
+}
+
+.twcss-mt-\[35px\] {
+  margin-top: 35px;
+}
+
+.twcss-mr-\[20px\] {
+  margin-right: 20px;
+}
+
 .twcss-block {
   display: block;
 }
@@ -529,42 +553,24 @@ video {
   display: flex;
 }
 
-.twcss-hidden {
-  display: none;
-}
-
-.twcss-h-\[37\] {
-  height: 37;
-}
-
 .twcss-h-\[37px\] {
   height: 37px;
-}
-
-.twcss-w-\[37\] {
-  width: 37;
-}
-
-.twcss-w-\[37px\] {
-  width: 37px;
 }
 
 .twcss-w-\[112px\] {
   width: 112px;
 }
 
+.twcss-w-\[37px\] {
+  width: 37px;
+}
+
 .twcss-w-full {
   width: 100%;
 }
 
-.twcss-translate-x-\[-118px\] {
-  --tw-translate-x: -118px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.twcss-translate-y-\[55px\] {
-  --tw-translate-y: 55px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.twcss-max-w-\[179px\] {
+  max-width: 179px;
 }
 
 .twcss-translate-x-\[-102px\] {
@@ -577,12 +583,20 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.twcss-flex-col {
+  flex-direction: column;
+}
+
 .twcss-items-center {
   align-items: center;
 }
 
 .twcss-justify-center {
   justify-content: center;
+}
+
+.twcss-justify-between {
+  justify-content: space-between;
 }
 
 .twcss-overflow-hidden {
@@ -606,8 +620,28 @@ video {
   font-size: 11px;
 }
 
+.twcss-text-\[13px\] {
+  font-size: 13px;
+}
+
+.twcss-text-\[25px\] {
+  font-size: 25px;
+}
+
+.twcss-text-\[9px\] {
+  font-size: 9px;
+}
+
+.twcss-text-\[19px\] {
+  font-size: 19px;
+}
+
 .twcss-uppercase {
   text-transform: uppercase;
+}
+
+.twcss-leading-\[22px\] {
+  line-height: 22px;
 }
 
 .twcss-tracking-\[1\.1px\] {
@@ -617,6 +651,11 @@ video {
 .twcss-text-black {
   --tw-text-opacity: 1;
   color: rgb(42 42 42 / var(--tw-text-opacity));
+}
+
+.twcss-text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 990px) {
