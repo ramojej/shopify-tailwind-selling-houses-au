@@ -4,7 +4,7 @@
 {{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
 
 <section class="custom-section">
-  <h2>{{ section.settings.title }}</h2>
+  <h2>{{ section.settings.section_title }}</h2>
   <p>{{ section.settings.paragraph_1 }}</p>
   <p>{{ section.settings.paragraph_2 }}</p>
   <h3>{{ section.settings.subtitle }}</h3>
@@ -26,8 +26,8 @@
   "settings": [
     {
       "type": "text",
-      "id": "title",
-      "label": "Title",
+      "id": "section_title",
+      "label": "Section Title",
       "default": "Browse Products"
     },
     {
