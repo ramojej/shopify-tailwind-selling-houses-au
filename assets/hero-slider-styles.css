@@ -121,7 +121,7 @@
 .product-info {
   background: var(--teal);
   padding: 30px;
-  transform: translate(35px, -31px);
+  transform: translate(51px, -31px);
   width: 342px;
   height: 207px;
 }
@@ -132,8 +132,8 @@
 
 .prev-next {
   position: absolute;
-  bottom: 80px;
-  left: -26px;
+  bottom: 60px;
+  left: -22px;
 }
 
 .prev-next .circle-btn {
@@ -168,4 +168,14 @@
 
 .prev-next .prev-button .btn-text {
   margin-top: 10px;
+}
+
+.foxtel svg {
+  width: 96px;
+  height: 20px;
+}
+
+.foxtel {
+  padding: 18px 20px 18px 35px;
+  background-color: var(--black)
 }

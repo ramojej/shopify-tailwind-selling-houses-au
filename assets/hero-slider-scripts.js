@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSlideNumber(slider) {
-    const slideNumberElement = sliderElement.querySelector('.slide-number');
+    const slideNumberElement = document.querySelector('.slide-number');
     const currentSlide = slider.currentIndex + 1;
     const totalSlides = slider.slides.length;
 
