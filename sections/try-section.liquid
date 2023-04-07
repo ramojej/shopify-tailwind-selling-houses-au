@@ -1,16 +1,7 @@
-{% comment %}
-  Custom section with dynamic inputs, CSS grid, and hover effects
-{% endcomment %}
-{{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
-
-<section class="custom-section">
-  <h2>test</h2>
-</section>
-
 {% schema %}
 {
-  "name": "Browse Product Categories",
-  "class": "custom-browse-products-section",
+  "name": "Try Section",
+  "class": "try-section",
   "settings": [
     {
       "type": "text",
@@ -69,4 +60,5 @@
     }
   ]
 }
-{% endschema %}  
+{% endschema %}
+  
