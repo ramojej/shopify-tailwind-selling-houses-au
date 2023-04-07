@@ -4,21 +4,7 @@
 {{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
 
 <section class="custom-section">
-  {% assign title = section.settings.title %}
-  {% assign paragraph_1 = section.settings.paragraph_1 %}
-  {% assign paragraph_2 = section.settings.paragraph_2 %}
-  {% assign subtitle = section.settings.subtitle %}
-
-  {% for block in section.blocks %}
-    {% assign category_title = block.settings.category_title %}
-    {% assign category_link = block.settings.category_link %}
-    {% assign category_image = block.settings.category_image %}
-    {% assign category_content = block.settings.category_content %}
-    {% assign category_number = block.settings.category_number %}
-
-    {%- comment -%} Your existing Liquid code using these variables {%- endcomment -%}
-  {% endfor %}
-
+  <h2>test</h2>
 </section>
 
 {% schema %}
