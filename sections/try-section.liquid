@@ -1,0 +1,64 @@
+{% schema %}
+  {
+    "name": "Try Section",
+    "class": "try-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Browse Products"
+      },
+      {
+        "type": "richtext",
+        "id": "paragraph_1",
+        "label": "Paragraph 1"
+      },
+      {
+        "type": "richtext",
+        "id": "paragraph_2",
+        "label": "Paragraph 2"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "category",
+        "name": "Category",
+        "settings": [
+          {
+            "type": "text",
+            "id": "category_title",
+            "label": "Category Title"
+          },
+          {
+            "type": "url",
+            "id": "category_link",
+            "label": "Category Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "category_image",
+            "label": "Category Image"
+          },
+          {
+            "type": "richtext",
+            "id": "category_content",
+            "label": "Category Content"
+          },
+          {
+            "type": "number",
+            "id": "category_number",
+            "label": "Category Number"
+          }
+        ],
+        "limit": 5
+      }
+    ]
+  }
+  {% endschema %}
+  
