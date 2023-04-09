@@ -4,6 +4,7 @@
 {{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
 
 <section class="custom-section">
+  <div class="small-title">{% render 'sau' %}</div>
   <h2>test</h2>
 </section>
 
@@ -53,6 +54,13 @@
           "type": "image_picker",
           "id": "category_image",
           "label": "Category Image"
+          
+        },
+        {
+          "type": "text",
+          "id": "figure",
+          "label": "Figure",
+          "default": "Over 100+"
         },
         {
           "type": "richtext",
@@ -60,9 +68,10 @@
           "label": "Category Content"
         },
         {
-          "type": "number",
-          "id": "category_number",
-          "label": "Category Number"
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#2F6178"
         }
       ],
       "limit": 5
