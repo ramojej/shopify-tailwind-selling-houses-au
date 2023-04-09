@@ -34,32 +34,9 @@
         "explore_products_link": "shopify:\/\/collections\/all",
         "hero_text": "Make your space look amazing"
       }
-    },
-    "56d78e84-d4b3-461f-a5ea-515e673e0c37": {
-      "type": "home-categories",
-      "blocks": {
-        "dedd4878-77df-43ac-b76d-53bb45fb03cd": {
-          "type": "category",
-          "settings": {
-            "category_title": "furniture",
-            "category_link": "#",
-            "category_content": ""
-          }
-        }
-      },
-      "block_order": [
-        "dedd4878-77df-43ac-b76d-53bb45fb03cd"
-      ],
-      "settings": {
-        "title": "BROWSE PRODUCTS",
-        "paragraph_1": "<p>Pellentesque vitae viverra nisi, sit amet cursus orci. Sed eu nunc lacus. Suspendisse congue neque auctor mollis fermentum. Pellentesque non lorem at arcu iaculis dapibus. <\/p>",
-        "paragraph_2": "<p>Donec tempor, augue ac interdum suscipit, ex ex lobortis felis, commodo gravida sapien nisi at ligula. Nam vitae erat sed elit feugiat semper. Nam a est sit amet nunc auctor fringilla.<\/p>",
-        "subtitle": "PRODUCT CATEGORIES"
-      }
     }
   },
   "order": [
-    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b",
-    "56d78e84-d4b3-461f-a5ea-515e673e0c37"
+    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b"
   ]
 }

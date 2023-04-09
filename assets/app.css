@@ -657,6 +657,10 @@ video {
   font-size: 10px;
 }
 
+.twcss-text-\[8px\] {
+  font-size: 8px;
+}
+
 .twcss-uppercase {
   text-transform: uppercase;
 }
@@ -677,6 +681,11 @@ video {
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.twcss-text-main {
+  --tw-text-opacity: 1;
+  color: rgb(94 184 193 / var(--tw-text-opacity));
 }
 
 @media (min-width: 990px) {
