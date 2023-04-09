@@ -34,9 +34,19 @@
         "explore_products_link": "shopify:\/\/collections\/all",
         "hero_text": "Make your space look amazing"
       }
+    },
+    "bd5e4d8a-b957-4b08-bb40-60eb4635fb03": {
+      "type": "home-categories",
+      "settings": {
+        "title": "Browse Products",
+        "paragraph_1": "",
+        "paragraph_2": "",
+        "subtitle": ""
+      }
     }
   },
   "order": [
-    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b"
+    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b",
+    "bd5e4d8a-b957-4b08-bb40-60eb4635fb03"
   ]
 }
