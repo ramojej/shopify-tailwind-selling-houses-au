@@ -59,11 +59,23 @@
             "category_content": "<p>Indoor furniture featured on the show<\/p>",
             "background_color": "#21acc9"
           }
+        },
+        "6423f7d4-1073-429f-bc1d-9b49e4524639": {
+          "type": "category",
+          "settings": {
+            "category_title": "kitchen",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/kitchen_img.jpg",
+            "figure": "Over 345+",
+            "category_content": "<p>Indoor furniture<br\/>featured on the show<\/p>",
+            "background_color": "#5eb8c1"
+          }
         }
       },
       "block_order": [
         "951c99a9-dc7e-4759-b463-0e6b0bc7ac98",
-        "b693b289-bd22-4315-ae34-47d3061fbced"
+        "b693b289-bd22-4315-ae34-47d3061fbced",
+        "6423f7d4-1073-429f-bc1d-9b49e4524639"
       ],
       "settings": {
         "title": "BROWSE PRODUCTS",
