@@ -70,12 +70,24 @@
             "category_content": "<p>Indoor furniture featured on the show<\/p>",
             "background_color": "#5eb8c1"
           }
+        },
+        "5d8d583a-2c4c-4325-9728-8662d6ba44cb": {
+          "type": "category",
+          "settings": {
+            "category_title": "bedroom",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/bedroom_img.jpg",
+            "figure": "Over 80+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#a8a8a8"
+          }
         }
       },
       "block_order": [
         "dcc84568-128a-4f29-ae7f-97a36b900694",
         "9e722cf9-6c02-45d8-88aa-632e7dfec0da",
-        "72e0ef9d-ecb9-4230-8409-39bdb6194cdd"
+        "72e0ef9d-ecb9-4230-8409-39bdb6194cdd",
+        "5d8d583a-2c4c-4325-9728-8662d6ba44cb"
       ],
       "settings": {
         "title": "Browse Products",
