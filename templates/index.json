@@ -37,6 +37,22 @@
     },
     "3ceb6758-5948-48f7-883d-4c5c6a0964c8": {
       "type": "home-categories",
+      "blocks": {
+        "dcc84568-128a-4f29-ae7f-97a36b900694": {
+          "type": "category",
+          "settings": {
+            "category_title": "furniture",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/furniture_img.jpg",
+            "figure": "Over 150+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#2F6178"
+          }
+        }
+      },
+      "block_order": [
+        "dcc84568-128a-4f29-ae7f-97a36b900694"
+      ],
       "settings": {
         "title": "Browse Products",
         "paragraph_1": "<p>Pellentesque vitae viverra nisi, sit amet cursus orci. Sed eu nunc lacus. Suspendisse congue neque auctor mollis fermentum. Pellentesque non lorem at arcu iaculis dapibus. <\/p>",
