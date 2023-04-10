@@ -3,9 +3,22 @@
 {% endcomment %}
 {{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
 
-<section class="custom-section">
+<section class="custom-product-cat-home">
   <div class="small-title">{% render 'sau' %}</div>
   <h2>test</h2>
+  <div class="product-cat-home-mobile">
+    {% for block in section.blocks %}
+      <div class="each-product-cat-row">
+        <div class="product-cat-title-img">
+          <span>{{ forloop.index | prepend: '0' }}</span>
+          <h3>{{ block.settings.category_title }}{% render 'icon-fat-arrow' %}</h3>
+          <img src="{{ block.settings.category_image | image_url: 'large' }}" width="{{ block.settings.category_image.width }}" height="{{ block.settings.category_image.height }}"alt="{{ block.settings.category_image.alt }}" loading="lazy">
+        </div>
+        
+        <div class="example-block__text">{{ block.settings.example_text | escape }}</div>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 {% schema %}
