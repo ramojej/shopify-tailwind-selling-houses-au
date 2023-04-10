@@ -48,10 +48,22 @@
             "category_content": "<p>Indoor furniture featured on the show<\/p>",
             "background_color": "#2F6178"
           }
+        },
+        "9e722cf9-6c02-45d8-88aa-632e7dfec0da": {
+          "type": "category",
+          "settings": {
+            "category_title": "bathroom",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/bathroom_img.jpg",
+            "figure": "Over 200+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#2F6178"
+          }
         }
       },
       "block_order": [
-        "dcc84568-128a-4f29-ae7f-97a36b900694"
+        "dcc84568-128a-4f29-ae7f-97a36b900694",
+        "9e722cf9-6c02-45d8-88aa-632e7dfec0da"
       ],
       "settings": {
         "title": "Browse Products",
