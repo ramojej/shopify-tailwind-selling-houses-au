@@ -81,13 +81,25 @@
             "category_content": "<p>Indoor furniture featured on the show<\/p>",
             "background_color": "#a8a8a8"
           }
+        },
+        "65dee7e7-5210-400d-b8ee-1c19acea4c70": {
+          "type": "category",
+          "settings": {
+            "category_title": "lighting",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/lightning_img.jpg",
+            "figure": "Over 120+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#2a2a2a"
+          }
         }
       },
       "block_order": [
         "951c99a9-dc7e-4759-b463-0e6b0bc7ac98",
         "b693b289-bd22-4315-ae34-47d3061fbced",
         "6423f7d4-1073-429f-bc1d-9b49e4524639",
-        "9d04242e-66c6-40e1-9a41-a978c1be9393"
+        "9d04242e-66c6-40e1-9a41-a978c1be9393",
+        "65dee7e7-5210-400d-b8ee-1c19acea4c70"
       ],
       "settings": {
         "title": "BROWSE PRODUCTS",
