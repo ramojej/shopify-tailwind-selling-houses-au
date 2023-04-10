@@ -36,3 +36,42 @@
 .category-box-content {
   padding: 20px;
 }
+
+.custom-product-cat-home h3:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--black);
+  height: 10px;
+  top: -30px;
+  width: 100%;
+}
+
+.custom-product-cat__intro {
+  margin-top: 30px;
+}
+
+.custom-product-cat__intro p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.custom-product-cat__intro p:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.product-cat-home-mobile {
+  margin-top: 80px;
+}
+
+.product-cat-title-img a h4 svg {
+  margin-left: 5px;
+}
+
+.each-product-cat-row:nth-child(even) .product-cat-text {
+  order: 1;
+}
+
+.each-product-cat-row:nth-child(even) .product-cat-title-img {
+  order: 2
+}
