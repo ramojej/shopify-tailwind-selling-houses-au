@@ -3,9 +3,37 @@
 {% endcomment %}
 {{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
 
-<section class="custom-section">
-  <h2>test</h2>
-</section>
+<div class="custom-product-cat-home page-width">
+  <div class="small-title twcss-text-right">
+    {% render 'sau' %} 
+    <span class="twcss-text-[11px] twcss-tracking-[1.1px]">{{ section.settings.subtitle }}</span>
+  </div>
+  
+  <h3 class="twcss-text-[50px] twcss-relative twcss-tracking-[0.275px] twcss-uppercase twcss-leading-[45px] twcss-mt-[73px]">{{ section.settings.title }}</h3>
+
+  <div class="custom-product-cat__intro">
+    {{ section.settings.paragraph_1 }}
+    {{ section.settings.paragraph_2 }}
+  </div>
+  
+</div>
+<div class="product-cat-home-mobile">
+  {% for block in section.blocks %}
+    <div class="each-product-cat-row twcss-flex twcss-items-center">
+      <div class="product-cat-title-img twcss-relative twcss-w-1/2">
+        <a href="{{ block.settings.category_link }}">
+          <span class="twcss-absolute twcss-right-[15px] twcss-top-[15px] twcss-text-white twcss-text-[10px] twcss-tracking-[1.1px]">{{ forloop.index | prepend: '0' }}</span>
+          <h4 class="twcss-text-white twcss-text-[30px] twcss-tracking-[0.275px] twcss-absolute twcss-bottom-[20px] twcss-left-[20px] twcss-flex twcss-items-center">{{ block.settings.category_title }}{% render 'icon-fat-arrow' %}</h4>
+          <img src="{{ block.settings.category_image | img_url: 'large' }}" width="{{ block.settings.category_image.width }}" height="{{ block.settings.category_image.height }}"alt="{{ block.settings.category_image.alt }}" loading="lazy">
+        </a>
+      </div>
+      <div class="product-cat-text twcss-w-1/2 twcss-px-5">
+        <h4 class=" twcss-text-[34px] twcss-tracking-[0.275px] ">{{ block.settings.figure }}</h4>
+        {{ block.settings.category_content }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
 
 {% schema %}
 {
@@ -53,6 +81,13 @@
           "type": "image_picker",
           "id": "category_image",
           "label": "Category Image"
+          
+        },
+        {
+          "type": "text",
+          "id": "figure",
+          "label": "Figure",
+          "default": "Over 100+"
         },
         {
           "type": "richtext",
@@ -60,12 +95,18 @@
           "label": "Category Content"
         },
         {
-          "type": "number",
-          "id": "category_number",
-          "label": "Category Number"
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#2F6178"
         }
       ],
       "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Browse Product Categories"
     }
   ]
 }

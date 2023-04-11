@@ -34,9 +34,83 @@
         "explore_products_link": "shopify:\/\/collections\/all",
         "hero_text": "Make your space look amazing"
       }
+    },
+    "3ceb6758-5948-48f7-883d-4c5c6a0964c8": {
+      "type": "home-categories",
+      "blocks": {
+        "dcc84568-128a-4f29-ae7f-97a36b900694": {
+          "type": "category",
+          "settings": {
+            "category_title": "furniture",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/furniture_img.jpg",
+            "figure": "Over 150+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#2F6178"
+          }
+        },
+        "9e722cf9-6c02-45d8-88aa-632e7dfec0da": {
+          "type": "category",
+          "settings": {
+            "category_title": "bathroom",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/bathroom_img.jpg",
+            "figure": "Over 200+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#21acc9"
+          }
+        },
+        "72e0ef9d-ecb9-4230-8409-39bdb6194cdd": {
+          "type": "category",
+          "settings": {
+            "category_title": "kitchen",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/kitchen_img.jpg",
+            "figure": "Over 345+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#5eb8c1"
+          }
+        },
+        "5d8d583a-2c4c-4325-9728-8662d6ba44cb": {
+          "type": "category",
+          "settings": {
+            "category_title": "bedroom",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/bedroom_img.jpg",
+            "figure": "Over 80+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#a8a8a8"
+          }
+        },
+        "abb199a2-66dd-47d0-8636-fdd8a483dcf7": {
+          "type": "category",
+          "settings": {
+            "category_title": "lighting",
+            "category_link": "#",
+            "category_image": "shopify:\/\/shop_images\/lightning_img.jpg",
+            "figure": "Over 120+",
+            "category_content": "<p>Indoor furniture featured on the show<\/p>",
+            "background_color": "#2a2a2a"
+          }
+        }
+      },
+      "block_order": [
+        "dcc84568-128a-4f29-ae7f-97a36b900694",
+        "9e722cf9-6c02-45d8-88aa-632e7dfec0da",
+        "72e0ef9d-ecb9-4230-8409-39bdb6194cdd",
+        "5d8d583a-2c4c-4325-9728-8662d6ba44cb",
+        "abb199a2-66dd-47d0-8636-fdd8a483dcf7"
+      ],
+      "settings": {
+        "title": "Browse Products",
+        "paragraph_1": "<p>Pellentesque vitae viverra nisi, sit amet cursus orci. Sed eu nunc lacus. Suspendisse congue neque auctor mollis fermentum. Pellentesque non lorem at arcu iaculis dapibus. <\/p>",
+        "paragraph_2": "<p>Donec tempor, augue ac interdum suscipit, ex ex lobortis felis, commodo gravida sapien nisi at ligula. Nam vitae erat sed elit feugiat semper. Nam a est sit amet nunc auctor fringilla.<\/p>",
+        "subtitle": "PRODUCT CATEGORIES"
+      }
     }
   },
   "order": [
-    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b"
+    "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b",
+    "3ceb6758-5948-48f7-883d-4c5c6a0964c8"
   ]
 }
