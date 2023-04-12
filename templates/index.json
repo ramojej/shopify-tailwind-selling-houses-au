@@ -46,7 +46,7 @@
             "category_image": "shopify:\/\/shop_images\/furniture_img.jpg",
             "figure": "Over 150+",
             "category_content": "<p>Indoor furniture featured on the show<\/p>",
-            "background_color": "#2F6178"
+            "background_color": "#2f6178"
           }
         },
         "9e722cf9-6c02-45d8-88aa-632e7dfec0da": {
@@ -107,10 +107,18 @@
         "paragraph_2": "<p>Donec tempor, augue ac interdum suscipit, ex ex lobortis felis, commodo gravida sapien nisi at ligula. Nam vitae erat sed elit feugiat semper. Nam a est sit amet nunc auctor fringilla.<\/p>",
         "subtitle": "PRODUCT CATEGORIES"
       }
+    },
+    "0fa1244c-ee24-43fc-88e3-ecda7a89c869": {
+      "type": "custom-featured",
+      "settings": {
+        "title": "Featured Products",
+        "collection": ""
+      }
     }
   },
   "order": [
     "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b",
-    "3ceb6758-5948-48f7-883d-4c5c6a0964c8"
+    "3ceb6758-5948-48f7-883d-4c5c6a0964c8",
+    "0fa1244c-ee24-43fc-88e3-ecda7a89c869"
   ]
 }
