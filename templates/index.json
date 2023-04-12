@@ -112,7 +112,7 @@
       "type": "custom-featured",
       "settings": {
         "title": "Featured Products",
-        "collection": ""
+        "collection": "featured"
       }
     }
   },
