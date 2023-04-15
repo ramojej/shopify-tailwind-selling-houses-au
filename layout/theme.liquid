@@ -236,11 +236,9 @@
       }
     {% endstyle %}
 
-    <link rel="preload" href="{{ 'YourCustomFont.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-
-
     {{ 'app.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -315,5 +313,43 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const customSection1 = document.querySelector('.featured-prod-slider');
+
+        if (customSection1) {
+          let swiperScriptLoaded = false;
+
+          const loadScript = (src) => {
+            return new Promise((resolve) => {
+              const script = document.createElement('script');
+              script.src = src;
+              script.defer = true;
+              script.addEventListener('load', resolve);
+              document.body.appendChild(script);
+            });
+          };
+
+          const handleScroll = async () => {
+            if (window.pageYOffset > 1) {
+              if (!swiperScriptLoaded) {
+                await loadScript('{{ 'swiper-bundle.min.js' | asset_url }}');
+                await loadScript('{{ 'custom-featured.js' | asset_url }}');
+                swiperScriptLoaded = true;
+              }
+              window.removeEventListener('scroll', handleScroll);
+            }
+          };
+
+          if (window.pageYOffset > 1) {
+            handleScroll();
+          } else {
+            window.addEventListener('scroll', handleScroll);
+          }
+        }
+      });
+
+    </script>
   </body>
 </html>
