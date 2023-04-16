@@ -1,0 +1,65 @@
+{% comment %}
+  Custom section with dynamic inputs, CSS grid, and hover effects
+{% endcomment %}
+{{ 'innovate.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width twcss-pt-[75px]">
+  <div class="small-title twcss-text-right">
+    {% render 'sau' %} 
+    <span class="twcss-text-[11px] twcss-tracking-[1.1px] twcss-uppercase">{{ section.settings.subtitle }}</span>
+  </div>
+  
+  <h3 class="title-bar twcss-text-[50px] twcss-relative twcss-tracking-[0.275px] twcss-uppercase twcss-leading-[45px] twcss-mt-[73px]">{{ section.settings.title }}</h3>
+
+  <div class="custom-product-cat__intro">
+    {{ section.settings.paragraph_1 }}
+    {{ section.settings.paragraph_2 }}
+  </div>
+  
+</div>
+
+{% if section.settings.section_image %}
+  Image test
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "How We Innovate Section",
+  "class": "how-we-innovate-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "How We Innovate"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Industrial Innovation"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "How We Innovate Section"
+    }
+  ]
+}
+{% endschema %}  
