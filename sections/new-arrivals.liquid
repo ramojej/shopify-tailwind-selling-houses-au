@@ -1,15 +1,15 @@
 {% comment %}
   Custom section with dynamic inputs, CSS grid, and hover effects
 {% endcomment %}
-{{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
+{{ 'new-arrivals.css' | asset_url | stylesheet_tag }}
 
-<div class="new-arrivals-home page-width">
+<div class="new-arrivals-home page-width twcss-pt-[75px]">
   <div class="small-title twcss-text-right">
     {% render 'sau' %} 
-    <span class="twcss-text-[11px] twcss-tracking-[1.1px]">{{ section.settings.subtitle }}</span>
+    <span class="twcss-text-[11px] twcss-tracking-[1.1px] twcss-uppercase">{{ section.settings.subtitle }}</span>
   </div>
   
-  <h3 class="twcss-text-[50px] twcss-relative twcss-tracking-[0.275px] twcss-uppercase twcss-leading-[45px] twcss-mt-[73px]">{{ section.settings.title }}</h3>
+  <h3 class="title-bar twcss-text-[50px] twcss-relative twcss-tracking-[0.275px] twcss-uppercase twcss-leading-[45px] twcss-mt-[73px]">{{ section.settings.title }}</h3>
 
   <div class="custom-product-cat__intro">
     {{ section.settings.paragraph_1 }}
@@ -17,6 +17,39 @@
   </div>
   
 </div>
+
+{% if section.settings.collection %}
+  <div class="new-arrivals-slider swiper-container">
+      <div class="swiper-wrapper">
+      {% for product in section.settings.collection.products %}
+        {% assign first_tag = product.tags | first %}
+        <div class="each-featured-product swiper-slide">
+          <span class="twcss-text-[14px]">{{ first_tag }}</span>
+          <a href="{{ product.url }}" class="twcss-block twcss-my-[15px]">
+            <h3 class="twcss-text-[32px]">{{ product.title }}</h3>
+          </a>
+          {% if product.metafields.custom.appearance %}
+            <span class="twcss-text-[14px] twcss-block twcss-text-[#A8A8A8]">Featured in {{ product.metafields.custom.appearance }}</span>
+          {% endif %}
+          <span class="twcss-text-main twcss-text-[24px] twcss-relative twcss-z-10 twcss-translate-y-[30px] twcss-block">{{ product.price | money_without_trailing_zeros }}</span>
+          <img src="{{ product.featured_image.src | img_url: 'large' }}" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}"alt="{{ product.featured_image.alt }}" loading="lazy" class="twcss-translate-x-[30px] twcss-translate-y-[-10px]">
+          
+          <a href="{{ product.url }}" class="twcss-flex twcss-items-center twcss-text-[18px]">
+            View Product <svg xmlns="http://www.w3.org/2000/svg" width="18.649" height="12.438" viewBox="0 0 18.649 12.438" class="twcss-ml-[10px]">
+            <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M19.775,11.49a.846.846,0,0,0-.006,1.192L23.7,16.627H8.718a.842.842,0,0,0,0,1.684H23.7l-3.938,3.945a.853.853,0,0,0,.006,1.192.839.839,0,0,0,1.185-.006l5.338-5.376h0a.946.946,0,0,0,.175-.266.8.8,0,0,0,.065-.324.844.844,0,0,0-.24-.589l-5.338-5.376A.825.825,0,0,0,19.775,11.49Z" transform="translate(-7.882 -11.252)"/>
+          </svg>
+          
+          </a>
+          
+        </div>
+      {% endfor %}
+      </div>
+      <div class="featured-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+{% endif %}
 
 
 {% schema %}

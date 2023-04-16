@@ -317,8 +317,9 @@
 
       document.addEventListener('DOMContentLoaded', function() {
         const customSection1 = document.querySelector('.featured-prod-slider');
+        const customSection2 = document.querySelector('.new-arrivals-section');
 
-        if (customSection1) {
+        if (customSection1 || customSection2) {
           let swiperScriptLoaded = false;
 
           const loadScript = (src) => {
@@ -335,7 +336,13 @@
             if (window.pageYOffset > 1) {
               if (!swiperScriptLoaded) {
                 await loadScript('{{ 'swiper-bundle.min.js' | asset_url }}');
-                await loadScript('{{ 'custom-featured.js' | asset_url }}');
+                if (customSection1) {
+                  await loadScript('{{ 'custom-featured.js' | asset_url }}');
+                }
+                if (customSection2) {
+                  await loadScript('{{ 'new-arrivals.js' | asset_url }}');
+                }
+                
                 swiperScriptLoaded = true;
               }
               window.removeEventListener('scroll', handleScroll);

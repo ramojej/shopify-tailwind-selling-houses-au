@@ -3078,3 +3078,13 @@ body {
   border: 1px solid #000;
   background: #000;
 }
+
+h3.title-bar:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--black);
+  height: 10px;
+  top: -30px;
+  width: 100%;
+}
