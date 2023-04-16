@@ -113,11 +113,22 @@
       "settings": {
         "collection": "featured"
       }
+    },
+    "64db727d-9214-4e97-a96b-19a177accc6f": {
+      "type": "new-arrivals",
+      "settings": {
+        "title": "New Arrivals",
+        "paragraph_1": "",
+        "paragraph_2": "",
+        "subtitle": "NEW PRODUCT ARRIVALS",
+        "collection": ""
+      }
     }
   },
   "order": [
     "ba108e7d-50f0-4d42-9c54-1b7eafcfdc6b",
     "3ceb6758-5948-48f7-883d-4c5c6a0964c8",
-    "131c21f3-2250-4f50-b527-cb0326b6bc06"
+    "131c21f3-2250-4f50-b527-cb0326b6bc06",
+    "64db727d-9214-4e97-a96b-19a177accc6f"
   ]
 }
