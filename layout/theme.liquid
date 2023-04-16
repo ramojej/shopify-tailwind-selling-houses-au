@@ -342,7 +342,7 @@
             }
           };
 
-          if (window.pageYOffset > 1) {
+          if (document.readyState === 'complete') {
             handleScroll();
           } else {
             window.addEventListener('scroll', handleScroll);

@@ -1,0 +1,61 @@
+{% comment %}
+  Custom section with dynamic inputs, CSS grid, and hover effects
+{% endcomment %}
+{{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
+
+<div class="new-arrivals-home page-width">
+  <div class="small-title twcss-text-right">
+    {% render 'sau' %} 
+    <span class="twcss-text-[11px] twcss-tracking-[1.1px]">{{ section.settings.subtitle }}</span>
+  </div>
+  
+  <h3 class="twcss-text-[50px] twcss-relative twcss-tracking-[0.275px] twcss-uppercase twcss-leading-[45px] twcss-mt-[73px]">{{ section.settings.title }}</h3>
+
+  <div class="custom-product-cat__intro">
+    {{ section.settings.paragraph_1 }}
+    {{ section.settings.paragraph_2 }}
+  </div>
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "New Arrivals Section",
+  "class": "new-arrivals-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "New Product Arrivals"
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Arrivals Section"
+    }
+  ]
+}
+{% endschema %}  
