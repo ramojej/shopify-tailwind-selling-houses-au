@@ -1,0 +1,29 @@
+.featured-prod-slider {
+  padding-top: 60px;
+}
+
+.featured-slider {
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.featured-slider .each-featured-product {
+  padding: 42px 37px;
+}
+
+.featured-slider .swiper-wrapper {
+  border-width: 0.5px 0;
+  border-color: #A8A8A8
+}
+
+.featured-slider .swiper-wrapper:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #A8A8A8
+}
+
+.featured-slider .featured-pagination {
+  margin-top: 40px;
+}
