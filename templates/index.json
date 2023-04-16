@@ -118,10 +118,10 @@
       "type": "new-arrivals",
       "settings": {
         "title": "New Arrivals",
-        "paragraph_1": "",
-        "paragraph_2": "",
+        "paragraph_1": "<p>Pellentesque vitae viverra nisi, sit amet cursus orci. Sed eu nunc lacus. Suspendisse congue neque auctor mollis fermentum. Pellentesque non lorem at arcu iaculis dapibus. <\/p>",
+        "paragraph_2": "<p>Donec tempor, augue ac interdum suscipit, ex ex lobortis felis, commodo gravida sapien nisi at ligula. Nam vitae erat sed elit feugiat semper. Nam a est sit amet nunc auctor fringilla.<\/p>",
         "subtitle": "NEW PRODUCT ARRIVALS",
-        "collection": ""
+        "collection": "new-arrivals"
       }
     }
   },
